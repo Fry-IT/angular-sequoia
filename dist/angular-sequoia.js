@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('ngSequoia', ['angular-lodash', 'ng-sortable', 'infinite-scroll', 'ngAnimate']);
+  angular.module('ngSequoia', ['ng-sortable', 'infinite-scroll', 'ngAnimate']);
 
 })();
 
