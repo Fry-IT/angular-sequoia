@@ -1,15 +1,15 @@
 <span>
-  <a class="sequoia-button sequoia-button-danger" href="" title="Remove" data-ng-click="remove(node)" data-ng-bind-html="buttons.remove"></a>
+  <button type="button" class="sequoia-button sequoia-button-danger" title="Remove" data-ng-click="remove(node)" data-ng-bind-html="buttons.remove"></button>
 </span>
 
 <span data-ng-if="node[tree.template.nodes] && node[tree.template.nodes].length">
-  <a class="sequoia-button sequoia-button-info" href="" title="Go to subitems" data-ng-click="load(node)" data-ng-bind-html="buttons.goToSubitems"></a>
+  <button type="button" class="sequoia-button sequoia-button-info" title="Go to subitems" data-ng-click="load(node)" data-ng-bind-html="buttons.goToSubitems"></button>
 </span>
 
 <span data-ng-if="!node[tree.template.nodes] || !node[tree.template.nodes].length">
-  <a class="sequoia-button sequoia-button-info" href="" title="Add subitems" data-ng-click="addNode(node)" data-ng-bind-html="buttons.addSubitems"></a>
+  <button type="button" class="sequoia-button sequoia-button-info" title="Add subitems" data-ng-click="addNode(node)" data-ng-bind-html="buttons.addSubitems"></button>
 </span>
 
 <span>
-  <a class="sequoia-button sequoia-button-default sequoia-move-handle" href="" data-ng-bind-html="buttons.move"></a>
+  <button type="button" class="sequoia-button sequoia-button-default sequoia-move-handle" data-ng-bind-html="buttons.move"></button>
 </span>

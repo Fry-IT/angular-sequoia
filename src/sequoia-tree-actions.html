@@ -1,18 +1,18 @@
 <ul>
   <li data-ng-if="(model.length || onlySelected) && !isEditing && buttons.showSelected !== false">
-    <a class="sequoia-button sequoia-button-info" href="" data-ng-click="toggleSelected()" data-ng-bind-html="model.length && !onlySelected ? buttons.showSelected : !model.length && onlySelected ? buttons.backToList : buttons.hideSelected"></a>
+    <button class="sequoia-button sequoia-button-info" type="button" data-ng-click="toggleSelected()" data-ng-bind-html="model.length && !onlySelected ? buttons.showSelected : !model.length && onlySelected ? buttons.backToList : buttons.hideSelected"></button>
   </li>
 
   <li data-ng-if="model.length && onlySelected && !isEditing">
-    <a class="sequoia-button sequoia-button-info" href="" data-ng-click="deselectAll()" data-ng-bind-html="buttons.deselectAll"></a>
+    <a class="sequoia-button sequoia-button-info" type="button" data-ng-click="deselectAll()" data-ng-bind-html="buttons.deselectAll"></a>
   </li>
 
   <li data-ng-if="isEditing && !onlySelected">
-    <a class="sequoia-button sequoia-button-success" href="" data-ng-click="addNode()" data-ng-bind-html="buttons.addNode"></a>
+    <button class="sequoia-button sequoia-button-success" type="button" data-ng-click="addNode()" data-ng-bind-html="buttons.addNode"></button>
   </li>
 
   <li data-ng-if="canEdit && !onlySelected">
-    <a class="sequoia-button sequoia-button-info" href="" data-ng-click="toggleEditing(sequoiaEditForm)" data-ng-bind-html="isEditing ? buttons.done : buttons.edit"></a>
+    <button class="sequoia-button sequoia-button-info" type="button" data-ng-click="toggleEditing(sequoiaEditForm)" data-ng-bind-html="isEditing ? buttons.done : buttons.edit"></button>
   </li>
 
 </ul>

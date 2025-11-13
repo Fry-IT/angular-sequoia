@@ -40,9 +40,10 @@
         padding-left: 15px;
       }
 
-      a.sequoia-modal-close {
+      .sequoia-modal-close {
         @extend %base-button;
 
+        background-color: transparent;
         font-size: 18px;
         font-weight: bold;
       }

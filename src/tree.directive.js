@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  function sequoiaTreeDirective(Tree, Utils, BUTTONS, DEFAULT_OPTIONS, SORTABLE_OPTIONS){
+  function sequoiaTreeDirective($document, $timeout, Tree, Utils, BUTTONS, DEFAULT_OPTIONS, SORTABLE_OPTIONS){
 
     return {
       restrict: 'AE',
@@ -134,6 +134,8 @@
 
         init();
 
+        var lastFocusedElement;
+
         scope.$watchCollection('treeNodes', function(newVal) {
           if(newVal) {
             scope.tree = new Tree(scope.treeNodes, scope.template, scope.buttons);
@@ -151,10 +153,16 @@
         scope.showModal = function() {
           scope.load();
           scope.modalShown = true;
+          lastFocusedElement = $document[0].activeElement;
         };
 
         scope.closeModal = function() {
           scope.modalShown = false;
+          $timeout(function() {
+            if (lastFocusedElement) {
+              lastFocusedElement.focus();
+            }
+          });
         };
 
         /* Handle adding and editing nodes */
@@ -209,7 +217,7 @@
 
   }
 
-  sequoiaTreeDirective.$inject = ['SequoiaTree', 'SequoiaTreeUtils', 'BUTTONS', 'DEFAULT_OPTIONS', 'SORTABLE_OPTIONS'];
+  sequoiaTreeDirective.$inject = ['$document', '$timeout', 'SequoiaTree', 'SequoiaTreeUtils', 'BUTTONS', 'DEFAULT_OPTIONS', 'SORTABLE_OPTIONS'];
 
   angular.module('ngSequoia')
     .directive('sequoiaTree', sequoiaTreeDirective);

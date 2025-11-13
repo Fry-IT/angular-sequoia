@@ -4,10 +4,10 @@
 .sequoia .sequoia-search, .sequoia .sequoia-tree li {
   padding: 10px 15px; }
 
-.sequoia .sequoia-modal-container .sequoia-modal-title a.sequoia-modal-close, .sequoia .sequoia-button, .sequoia .sequoia-tree .sequoia-item-title, .sequoia input[type="text"] {
+.sequoia .sequoia-modal-container .sequoia-modal-title .sequoia-modal-close, .sequoia .sequoia-button, .sequoia .sequoia-tree .sequoia-item-title, .sequoia input[type="text"] {
   padding: 6px 12px; }
 
-.sequoia .sequoia-modal-container .sequoia-modal-title a.sequoia-modal-close, .sequoia .sequoia-button {
+.sequoia .sequoia-modal-container .sequoia-modal-title .sequoia-modal-close, .sequoia .sequoia-button {
   display: inline-block;
   margin-bottom: 0;
   font-size: 14px;
@@ -26,7 +26,7 @@
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px; }
-  .sequoia .sequoia-modal-container .sequoia-modal-title a.sequoia-modal-close:hover, .sequoia .sequoia-button:hover, .sequoia .sequoia-modal-container .sequoia-modal-title a.sequoia-modal-close:active, .sequoia .sequoia-button:active, .sequoia .sequoia-modal-container .sequoia-modal-title a.sequoia-modal-close:focus, .sequoia .sequoia-button:focus {
+  .sequoia .sequoia-modal-container .sequoia-modal-title .sequoia-modal-close:hover, .sequoia .sequoia-button:hover, .sequoia .sequoia-modal-container .sequoia-modal-title .sequoia-modal-close:active, .sequoia .sequoia-button:active, .sequoia .sequoia-modal-container .sequoia-modal-title .sequoia-modal-close:focus, .sequoia .sequoia-button:focus {
     text-decoration: none; }
 
 .sequoia .sequoia-search .sequoia-actions ul, .sequoia .sequoia-breadcrumbs {
@@ -77,7 +77,8 @@
         clear: both; }
       .sequoia .sequoia-modal-container .sequoia-modal-title h4 {
         padding-left: 15px; }
-      .sequoia .sequoia-modal-container .sequoia-modal-title a.sequoia-modal-close {
+      .sequoia .sequoia-modal-container .sequoia-modal-title .sequoia-modal-close {
+        background-color: transparent;
         font-size: 18px;
         font-weight: bold; }
     .sequoia .sequoia-modal-container .sequoia-modal {

@@ -9,13 +9,13 @@
   <ul data-ng-if="!searchEnabled && !onlySelected" class="sequoia-breadcrumbs" data-ng-include="'sequoia-breadcrumbs.html'"></ul>
 
   <p class="sequoia-up-one-level" data-ng-if="parentNode && !searchEnabled">
-    <a href="" class="sequoia-button sequoia-button-info" data-ng-click="load(parentNode)" data-ng-bind-html="buttons.up"></a>
+    <button type="button" class="sequoia-button sequoia-button-info" data-ng-click="load(parentNode)" data-ng-bind-html="buttons.up"></button>
   </p>
 
   <div class="sequoia-notification" data-ng-show="notification">
     <p>
       <span class="pull-left" data-ng-bind="notification"></span>
-      <a class="pull-right sequoia-button" href="" data-ng-click="closeNotification()" data-ng-bind-html="buttons.searchClear"></a>
+      <button class="pull-right sequoia-button" type="button" data-ng-click="closeNotification()" data-ng-bind-html="buttons.searchClear"></button>
     </p>
   </div>
 
