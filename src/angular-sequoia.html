@@ -1,12 +1,12 @@
 <div class="sequoia">
   <div class="sequoia-modal-container" data-ng-if="!inline">
-    <button type="button" class="sequoia-button sequoia-button-info" data-ng-click="showModal()" data-ng-bind="model.length ? isMultiSelect ? buttons.modalSelect + ' (' + model.length + ')' : buttons.modalSelect + ' (1)' : buttons.modalSelect"></button>
+    <button type="button" aria-haspopup="dialog" class="sequoia-button sequoia-button-info" data-ng-click="showModal()" data-ng-bind="model.length ? isMultiSelect ? buttons.modalSelect + ' (' + model.length + ')' : buttons.modalSelect + ' (1)' : buttons.modalSelect"></button>
     <div role="dialog" focus-trap="modalShown" on-deactivate="closeModal()" data-ng-if="modalShown">
       <div class="sequoia-overlay"></div>
       <div class="sequoia-modal">
         <div class="sequoia-modal-title">
           <h4 class="pull-left" data-ng-bind-html="buttons.modalSelect"></h4>
-          <button type="button" class="sequoia-modal-close pull-right" data-ng-click="closeModal()">&times;</button>
+          <button type="button" aria-label="Close dialog" class="sequoia-modal-close pull-right" data-ng-click="closeModal()">&times;</button>
         </div>
         <div data-ng-include="'sequoia-tree.html'"></div>
       </div>
